@@ -5,8 +5,7 @@ class List:
         self.head = None
 
     def push(self, data):
-        if self.head != Node:
-            self.head = Node()
-            self.head.data = data
+        if self.head == None:
+            self.head = Node(data)
         else:
             self.head.push(data)
