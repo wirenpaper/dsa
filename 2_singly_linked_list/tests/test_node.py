@@ -1,8 +1,7 @@
 from libs.node import Node
 
 def test_push():
-    n1 = Node()
-    n1.data = 3
+    n1 = Node(3)
     assert n1.data == 3
     assert n1.next == None
     n1.push(4)
