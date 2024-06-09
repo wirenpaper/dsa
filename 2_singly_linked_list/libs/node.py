@@ -9,3 +9,13 @@ class Node:
             return self
         self.next = Node(data)
         return self
+
+    def print(self):
+        print(self.data)
+        if self.next != None:
+            self.next.print()
+
+    def rprint(self):
+        if self.next != None:
+            self.next.rprint()
+        print(self.data)
