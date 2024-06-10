@@ -4,7 +4,7 @@ class DynamicArray:
         self.len = 0
         self.cap = 0
 
-    def push(self, data):
+    def add(self, data):
         if self.arr == None:
             self.cap = 1
             self.arr = [data]
