@@ -1,1 +1,16 @@
+from libs.da import DynamicArray
 
+da = DynamicArray()
+da.push(3)
+print(da.arr)
+print("-------")
+da.push(4)
+print(da.arr)
+da.push(5)
+print(da.arr)
+da.push(6)
+print(da.arr)
+da.push(7)
+print(da.arr)
+da.push(8)
+print(da.arr)

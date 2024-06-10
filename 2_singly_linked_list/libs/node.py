@@ -16,6 +16,7 @@ class Node:
             return self, data
         return None, self.data
 
+
     def print(self):
         print(self.data)
         if self.next != None:
