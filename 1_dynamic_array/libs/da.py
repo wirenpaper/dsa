@@ -9,7 +9,10 @@ class DynamicArray:
             self.cap = 1
             self.arr = [data]
             self.len = 1
-        elif self.len == self.cap:
+        elif self.len < self.cap:
+            self.arr[self.len] = data
+            self.len += 1
+        else:
             self.cap *= 2
             tmp_arr = [None] * self.cap
             for i in range(self.len):
@@ -17,9 +20,6 @@ class DynamicArray:
             tmp_arr[self.len] = data
             self.len += 1
             self.arr = tmp_arr
-        elif self.len < self.cap:
-            self.arr[self.len] = data
-            self.len += 1
 
     def print(self):
         print(self.arr)
