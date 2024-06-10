@@ -25,3 +25,11 @@ def test_add():
     assert da.arr == [3, 4, 5, 6, 7, None, None, None]
     assert da.cap == 8
     assert da.len == 5
+
+def test_remove_at():
+    da = DynamicArray();
+    da.push(3)
+    da.push(4)
+    da.push(5)
+    da.push(6)
+    da.push(7)
