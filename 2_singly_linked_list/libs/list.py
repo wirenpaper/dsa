@@ -8,21 +8,21 @@ class List:
     def __init__(self):
         self.head = None
 
-    def push(self, data):
+    def add_last(self, data):
         if self.head == None:
             self.head = Node(data)
         else:
-            self.head.push(data)
+            self.head.add_last(data)
 
-    def pop(self):
+    def remove_last(self):
         if self.head == None:
             return None
         elif self.head.next == None:
-            _, res = self.head.pop()
+            _, res = self.head.remove_last()
             self.head = None
             return res
         else:
-            _, res = self.head.pop()
+            _, res = self.head.remove_last()
             return res
 
     def print(self, mode="default"):

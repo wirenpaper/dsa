@@ -3,16 +3,16 @@ class Node:
         self.data = data
         self.next = None
 
-    def push(self, data):
+    def add_last(self, data):
         if self.next != None:
-            self.next = self.next.push(data)
+            self.next = self.next.add_last(data)
             return self
         self.next = Node(data)
         return self
 
-    def pop(self):
+    def remove_last(self):
         if self.next != None:
-            self.next, data = self.next.pop()
+            self.next, data = self.next.remove_last()
             return self, data
         return None, self.data
 
