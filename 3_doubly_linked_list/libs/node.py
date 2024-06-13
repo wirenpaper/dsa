@@ -9,3 +9,10 @@ class Node:
         cur.next = self
         self.prev = cur
         return cur
+
+    def add_last(self, tail, data):
+        tail.next = Node(data)
+        prev = tail
+        tail = tail.next
+        tail.prev = prev
+        return tail
