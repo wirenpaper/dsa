@@ -45,3 +45,23 @@ def test_remove_last():
     assert n1.next.next.next.data == 6
     assert n1.next.next.next.next == None
     assert res == 7
+
+def test_add_first():
+    n1 = Node(3)
+    n1 = n1.add_first(4)
+    assert n1.data == 4
+    assert n1.next.data == 3
+    assert n1.next.next == None
+
+    n1 = n1.add_first(5)
+    assert n1.data == 5
+    assert n1.next.data == 4
+    assert n1.next.next.data == 3
+    assert n1.next.next.next == None
+
+    n1 = n1.add_first(6)
+    assert n1.data == 6
+    assert n1.next.data == 5
+    assert n1.next.next.data == 4
+    assert n1.next.next.next.data == 3
+    assert n1.next.next.next.next == None

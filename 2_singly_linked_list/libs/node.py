@@ -3,6 +3,11 @@ class Node:
         self.data = data
         self.next = None
 
+    def add_first(self, data):
+        cur = Node(data)
+        cur.next = self
+        return cur
+
     def add_last(self, data):
         if self.next != None:
             self.next = self.next.add_last(data)
@@ -15,7 +20,6 @@ class Node:
             self.next, data = self.next.remove_last()
             return self, data
         return None, self.data
-
 
     def print(self):
         print(self.data)

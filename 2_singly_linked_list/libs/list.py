@@ -8,6 +8,12 @@ class List:
     def __init__(self):
         self.head = None
 
+    def add_first(self, data):
+        if self.head == None:
+            self.head = Node(data)
+        else:
+            self.head = self.head.add_first(data)
+
     def add_last(self, data):
         if self.head == None:
             self.head = Node(data)
