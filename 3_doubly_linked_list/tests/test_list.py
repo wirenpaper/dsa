@@ -33,6 +33,7 @@ def test_add_first():
     assert mlist.head.next.prev.data == 5
     assert mlist.tail.prev.next.data == 3
 
+
 def test_add_last():
     mlist = List()
     assert mlist.head == None
