@@ -16,3 +16,11 @@ class Node:
         tail = tail.next
         tail.prev = prev
         return tail
+
+    def remove_last(self):
+        if self.next != None:
+            self.next, tail, data = self.next.remove_last()
+            return self, tail, data
+        data = self.data
+        tail = self.prev
+        return None, tail, data
