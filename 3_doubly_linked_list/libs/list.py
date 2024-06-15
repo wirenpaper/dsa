@@ -18,3 +18,10 @@ class List:
             self.tail = self.head
         else:
             self.tail = self.head.add_last(self.tail, data)
+
+    def remove_last(self):
+        if self.head == None:
+            return None
+        else:
+            self.head, self.tail, data = self.head.remove_last()
+            return data
