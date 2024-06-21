@@ -37,6 +37,12 @@ def test_remove_last():
     assert list1.head.data == 3
     assert list1.head.next == None
 
+def test_remove_first():
+    list1 = List()
+    assert list1.head == None
+    res = list1.remove_first()
+    assert res == None
+
 def test_add_first():
     list1 = List()
     assert list1.head == None

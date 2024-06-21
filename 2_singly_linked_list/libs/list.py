@@ -31,6 +31,14 @@ class List:
             _, res = self.head.remove_last()
             return res
 
+    def remove_first(self):
+        if self.head == None:
+            return None
+        else:
+            data = self.head.data
+            self.head = self.head.next
+            return data
+
     def print(self, mode="default"):
         if self.head != None:
             if mode == "default":
